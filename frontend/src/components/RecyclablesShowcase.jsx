@@ -47,7 +47,7 @@ export const RecyclablesShowcase = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative mx-auto w-48 h-48 md:w-56 md:h-56 mb-8 md:mb-0"
+            className="relative mx-auto w-48 h-48 md:w-56 md:h-56 mb-8 md:mb-0 z-10"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-mantis/20 to-book-green/20 rounded-full" />
             <div className="absolute inset-3 bg-white rounded-full shadow-lg flex items-center justify-center">
