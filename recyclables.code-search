@@ -1,0 +1,46 @@
+# Query: recyclables
+# ContextLines: 1
+
+12 results - 3 files
+
+frontend/src/components/RecyclablesShowcase.jsx:
+    4  
+    5: const recyclables = [
+    6    { name: "Paper", nameHi: "Kagaz", icon: FileText, items: "Newspaper, Books, Cardboard, Office Paper", position: "top-left" },
+
+   12  
+   13: export const RecyclablesShowcase = () => {
+   14    return (
+   15:     <section className="relative py-20 md:py-28 overflow-hidden" data-testid="recyclables-showcase">
+   16        {/* Grid background like the reference */}
+
+   35            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1A1A1A]">
+   36:             Recyclables <span className="text-mantis">We Accept</span>
+   37            </h2>
+
+   65            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:-mt-4">
+   66:             {recyclables.map((item, index) => (
+   67                <motion.div
+
+  107          >
+  108:           <Link to="/pricing" data-testid="recyclables-price-list-btn">
+  109              <motion.div
+
+frontend/src/pages/LandingPage.jsx:
+   5  import { HowItWorks } from "@/components/HowItWorks";
+   6: import { RecyclablesShowcase } from "@/components/RecyclablesShowcase";
+   7  import { ProcessPoster } from "@/components/ProcessPoster";
+
+  15        <HeroSection />
+  16:       <RecyclablesShowcase />
+  17        <HowItWorks />
+
+test_reports/iteration_3.json:
+   1  {
+   2:   "summary": "Completed comprehensive testing of new RecyclablesShowcase and ServiceSections components. All backend APIs working (8/8 tests passed). New frontend sections render correctly with proper CTAs linking to /pricing and /book pages. All existing navigation and functionality preserved.",
+   3    "backend_issues": {
+
+  13      "Backend API tests (8/8 passed): Root endpoint, Pricing API, Impact API, Booking creation/retrieval, Booking tracking, Contact API, Invalid booking handling",
+  14:     "RecyclablesShowcase section renders with all 5 categories (Paper, Plastic, Metal, E-Waste, Clothes)",
+  15:     "RecyclablesShowcase 'See Full Price List' button links correctly to /pricing",
+  16      "ServiceSections Household section renders with 'Ghar Ka Kabad? Hum Hain Na!' heading",
