@@ -70,7 +70,7 @@ export const RecyclablesShowcase = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative"
+                className={`group relative ${index === 2 ? 'md:mt-16' : ''}`}
               >
                 {/* Arrow connector for desktop */}
                 <div className="hidden md:block absolute -top-8 left-1/2 -translate-x-1/2">
