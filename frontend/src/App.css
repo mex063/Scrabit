@@ -1,0 +1,27 @@
+/* Scrabit Custom Styles */
+
+.booking-btn-wrapper {
+  position: relative;
+}
+
+.booking-btn-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: rgba(116, 195, 101, 0.3);
+  animation: pulse-ring 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Calendar brand overrides */
+.rdp-day_selected,
+.rdp-day_selected:hover,
+.rdp-day_selected:focus {
+  background-color: #74C365 !important;
+  color: white !important;
+}
+
+.rdp-day_today:not(.rdp-day_selected) {
+  color: #74C365 !important;
+  font-weight: 700;
+}
