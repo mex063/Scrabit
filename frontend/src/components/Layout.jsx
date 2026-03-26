@@ -123,9 +123,9 @@ export default function Layout() {
             <div>
               <h4 className="font-heading font-semibold text-[#1A1A1A] mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-[#525252]">
-                <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-mantis" /> +91 98765 43210</li>
-                <li>hello@scrabit.in</li>
-                <li>Mumbai, Maharashtra</li>
+                <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-mantis" /> +91 63970 06374</li>
+                <li>Customer Support Available : 10AM - 6PM</li>
+                <li>Agra,Uttarpradesh</li>
               </ul>
             </div>
           </div>
