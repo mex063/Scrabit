@@ -4,28 +4,28 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    location: "Andheri, Mumbai",
-    text: "Pehle kabbadiwala se bahut kam milta tha. Scrabit se 40% zyada mila aur ghar pe aake le gaye. Best experience ever!",
+    name: "Siya Sharma",
+    location: "Agra, Uttarpradesh",
+    text: "first time experience kafi shi raha, booked time pr team agayi aur kafi professionally kaam kia!",
+    rating: 4,
+  },
+  {
+    name: "Shagun Gupta",
+    location: "Agra, Uttarpradesh",
+    text: "overall experience was good, i wanted to sell my old clinic equipments, the team gave me a good value",
     rating: 5,
   },
   {
-    name: "Rajesh Gupta",
-    location: "Powai, Mumbai",
-    text: "Office ke purane computers aur paper scrap ka full value mila. Digital weighing dekh ke trust ho gaya. Ab Scrabit hi use karunga.",
+    name: "Bharat Kumar",
+    location: "Agra, Uttarpradesh",
+    text: "दुकान बंद होने पर बहुत सारा कबाड़ पड़ा था। अपॉइंटमेंट बुक कियाा, टीम आई, सब उठा ले गई और तुरंत पैसे मिले। बहुत बढ़िया सेवा!",
     rating: 5,
   },
   {
-    name: "Sneha Patil",
-    location: "Dadar, Mumbai",
-    text: "Very professional service. On-time aaye, sab sahi se tola, aur UPI pe payment aa gaya. No complaints at all! Highly recommended.",
-    rating: 5,
-  },
-  {
-    name: "Amit Verma",
-    location: "Bandra, Mumbai",
-    text: "Local kabbadiwala ne weight mein dhoka diya tha. Scrabit try kiya, transparent weighing mili. Ab kabhi purane tarike pe nahi jaunga!",
-    rating: 5,
+    name: "Meet Gyamalani",
+    location: "Agra, Uttarpradesh",
+    text: "Local kabbadiwala se better experience tha, Scrabit first time try kiya, transparent weighing mili overall experience theek rha!",
+    rating: 4,
   },
 ];
 
