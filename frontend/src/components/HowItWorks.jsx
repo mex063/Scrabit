@@ -1,36 +1,4 @@
 import { motion } from "framer-motion";
-import { CalendarClock, Truck, Scale, Banknote } from "lucide-react";
-
-const steps = [
-  {
-    icon: CalendarClock,
-    title: "Schedule Pickup",
-    titleHi: "Booking Karo",
-    description: "Choose date, time & scrap type online. It takes just 30 seconds.",
-    color: "bg-mantis/10 text-mantis",
-  },
-  {
-    icon: Truck,
-    title: "We Arrive",
-    titleHi: "Hum Aayenge",
-    description: "Our trained pickup partner arrives at your doorstep on time.",
-    color: "bg-book-green/10 text-book-green",
-  },
-  {
-    icon: Scale,
-    title: "Weigh & Sort",
-    titleHi: "Tolo Aur Chhaanto",
-    description: "Digital weighing in front of you. No guesswork, no cheating.",
-    color: "bg-mantis/10 text-mantis",
-  },
-  {
-    icon: Banknote,
-    title: "Get Paid",
-    titleHi: "Paisa Lo",
-    description: "Instant payment via UPI or cash. Best rates guaranteed.",
-    color: "bg-book-green/10 text-book-green",
-  },
-];
 
 export const HowItWorks = () => {
   return (
@@ -41,7 +9,7 @@ export const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <span className="text-mantis font-medium text-sm uppercase tracking-wider">Kaise Kaam Karta Hai?</span>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1A1A1A] mt-3">
@@ -52,33 +20,38 @@ export const HowItWorks = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-          <div className="hidden md:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 border-t-2 border-dashed border-mantis/30" />
-
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="relative text-center"
-            >
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-7 h-7 bg-mantis text-white rounded-full flex items-center justify-center text-xs font-bold z-10">
-                {index + 1}
-              </div>
-
-              <div className={`w-16 h-16 ${step.color} rounded-2xl flex items-center justify-center mx-auto mb-5`}>
-                <step.icon className="w-8 h-8" />
-              </div>
-
-              <h3 className="font-heading font-semibold text-[#1A1A1A] text-lg mb-1">{step.title}</h3>
-              <p className="text-mantis text-sm font-medium italic mb-2">{step.titleHi}</p>
-              <p className="text-[#525252] text-sm">{step.description}</p>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="rounded-2xl overflow-hidden shadow-lg"
+        >
+          <img
+            src="https://i.ibb.co/8Gy7WwH/Firefly-Gemini-Flash-A-clean-modern-hero-image-for-a-scrap-pickup-startup-called-Scrabit-Show-a-f.png"
+            alt="How Scrabit Works"
+            className="w-full object-cover"
+          />
+        </motion.div>
       </div>
     </section>
   );
 };
+```
+
+---
+
+## Now Update Your Website
+
+### Step 1 — Replace the code
+- Open **HowItWorks.jsx** in VS Code
+- Select all (**Ctrl + A**)
+- Delete and paste the new code above
+
+### Step 2 — Push to GitHub
+Open Command Prompt and type:
+```
+cd Documents\GitHub\Scrabit
+git add .
+git commit -m "updated how it works section"
+git push origin main
