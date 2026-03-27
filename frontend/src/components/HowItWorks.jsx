@@ -31,9 +31,9 @@ export const HowItWorks = () => {
           className="rounded-2xl overflow-hidden shadow-lg"
         >
           <img
-            src="https://i.ibb.co/8Gy7WwH/Firefly-Gemini-Flash-A-clean-modern-hero-image-for-a-scrap-pickup-startup-called-Scrabit-Show-a-f.png"
+            src="/images/hero.png"
             alt="How Scrabit Works"
-            className="w-full object-cover"
+            className="w-full h-auto object-cover"
           />
         </motion.div>
       </div>
