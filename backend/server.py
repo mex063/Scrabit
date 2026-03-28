@@ -9,6 +9,7 @@ from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict
 from typing import List, Optional
 import uuid
+import httpx
 from datetime import datetime, timezone
 
 ROOT_DIR = Path(__file__).parent
@@ -147,6 +148,19 @@ async def create_booking(booking: BookingCreate):
     }
 
     await db.bookings.insert_one(doc)
+    # Send Telegram notification
+    try:
+        telegram_token = os.environ.get("TELEGRAM_BOT_TOKEN")
+        telegram_chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+        if telegram_token and telegram_chat_id:
+            message = f"🚨 New Booking!\n\nID: {booking_id}\nName: {booking.name}\nPhone: {booking.phone}\nAddress: {booking.address}, {booking.city}\nDate: {booking.preferred_date}\nTime: {booking.preferred_time}\nAmount: Rs {round(estimated_amount, 2)}"
+            async with httpx.AsyncClient() as client_http:
+                await client_http.post(
+                    f"https://api.telegram.org/bot{telegram_token}/sendMessage",
+                    json={"chat_id": telegram_chat_id, "text": message}
+                )
+    except Exception as e:
+        logging.error(f"Telegram notification failed: {e}")
     doc.pop("_id", None)
     return doc
 
