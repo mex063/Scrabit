@@ -11,18 +11,15 @@ export const HowItWorks = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <span className="text-mantis font-medium text-sm uppercase tracking-wider">
-            How It Works
-          </span>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1A1A1A] mt-3">
-            4 Simple Steps.{" "}
-            <span className="text-mantis">That Is All.</span>
+            Kabad Bechna{" "}
+            <span className="text-mantis">Itna Aasan</span>{" "}
+            Kabhi Nahi Tha
           </h2>
           <p className="text-[#525252] mt-3 text-base md:text-lg max-w-xl mx-auto">
-            Book a pickup and get paid instantly. Simple and fast.
+            From booking to payment - everything happens at your doorstep. No middlemen, no hassle.
           </p>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
